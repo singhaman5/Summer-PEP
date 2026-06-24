@@ -13,7 +13,7 @@ int main(){
             lo = mid+1;
         }
         else if(arr[mid]<target){
-            lo = mid+1;
+            lo = mid+1 ;
         }
         else hi = mid-1;
     }
