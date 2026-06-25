@@ -43,7 +43,7 @@ int main(){
     }
     else{
         int count = last - first + 1;
-        cout<<count;
+        cout<<count<<endl;
     }
     return 0;
 }
