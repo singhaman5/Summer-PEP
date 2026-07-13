@@ -1,0 +1,24 @@
+#include<iostream>
+#include<stack>
+using namespace std;
+
+int minAddToMakeValid(string s){
+    stack<char> st;
+    for(char ch : s){
+        if(ch == '('){
+            st.push(ch);
+        }
+        else{
+            if(!st.empty() && st.top() == '(')
+                st.pop();
+            else
+                st.push(ch);
+        }
+    }
+    return st.size();
+}
+
+int main(){
+    string s = "()))((";
+    cout << minAddToMakeValid(s);
+}
